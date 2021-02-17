@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    root: "warn"
+    org.springframework.web: "debug"
+    com.springcoding: "debug"
+
+spring:
+  application:
+    name: spring-mongodb-demo
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: spring-mongodb
