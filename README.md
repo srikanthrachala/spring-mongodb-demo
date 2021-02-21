@@ -39,3 +39,17 @@ curl --location --request PUT 'localhost:8080/products/1' \
 ```sh
 curl --location --request DELETE 'localhost:8080/products/1'
 ```
+
+- File Upload and Download
+
+```sh
+curl --location --request POST 'localhost:8080/images' \
+--header 'Content-Type: application/json' \
+--form 'file=@"/Users/Srikanth/Desktop/test.txt"' \
+--form 'name="test.txt"'
+```
+
+```sh
+curl --location --request GET 'localhost:8080/images/6031e2678e4bff08ef95d429' \
+--header 'Content-Type: application/json'
+```
